@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+ <style>
+    .all{
+        width: 250px;
+        height: 280px;
+        background-color: black;
+
+    }
+    .line{
+        background-color: gray;
+      width: 250px;
+      height: 1px;
+      margin-left: 0px;
+      margin-top: 25px;
+
+    }
+    .buttons{
+        width: 170px;
+        height: 40px;
+        background-color: tomato;
+        margin-left: 42px;
+        color: white;
+        margin-top: 15px;
+        border-radius: 10px;
+    }
+    .buttons:hover{
+        color: rgb(239, 157, 142);
+    }
+    .account{
+        width:130px ;
+        margin-left: 55px;
+        height: 35px;
+        background-color: gray;
+        margin-bottom: 3px;
+        border-radius: 10px;
+        
+    }
+    .account:hover{
+        color: orange;
+    }
+    .third{
+        margin-top: 7px;
+        background-color: rgb(159, 159, 169);
+        height:40px ;
+        border-radius: 10px;
+        width: 250px;
+    }
+    .third:hover{
+        color: aqua;
+        background-color: blueviolet;
+    }
+    .order{
+        height: 40px;
+        margin-top: 15px;
+        border-radius: 10px;
+    }
+    .order:hover{
+        background-color: teal;
+        
+    }
+    .class:hover{
+        background-color: aquamarine;
+    }
+    .all{
+        display: none;
+    }
+    .mother:hover .all{
+        display: block;
+    }
+    
+    
+    
+</style>
+<body>
+    <div class="mother">
+       <button class="account"><i class="fa-regular fa-user" style="font-size: x-large;">
+         </i><b style="font-size: 15px; margin-left: 4px;">Account</b></button>
+        <div class="all">
+          <button class="buttons"> <b style="font-size: 15px;">Sign in</b></button>
+          <div class="line"></div>
+          <button class="third"><i class="fa-regular fa-user" style="font-size: x-large; color: white;">
+            <small style="font-size:10px ;margin-left: 4px;">My account</small></i>
+           </i></button>
+            <div class="order"><button style="width: 250px;
+              height: 38px;border-radius: 10px;">
+              <i class="fa-brands fa-stack-exchange"></i><small style="margin-left: 10px;
+              font-size: 15px;">Orders</small></button>
+            </div>
+           <button style="margin-top: 15px;height:38px;width: 250px;border-radius: 10px;" class="class">
+            <i class="fa-regular fa-heart"></i><small style="font-size: 15px;margin-left: 10px;">Saved items</small></button>
+        </div>
+        
+    </div>
+    
+</body>
+
+</html>

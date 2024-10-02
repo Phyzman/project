@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      scroll-behavior:smooth;
+      font-family: century;
+    }
+    .search {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 12px 10px gainsboro;
+      background-color: white;
+      position: sticky;
+      top: 0;
+      
+    }
+    .item {
+      display: flex;
+      align-items: center;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      margin: 10px;
+    }
+
+    .button input {
+      background: red;
+      color: white;
+      padding: 7px;
+      height: 35px;
+      width: 70px;
+      margin: 20px;
+    }
+
+    .search_button {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      height: 45px;
+      width: 340px;
+      background-color: white;
+      border-radius: 10px;
+      
+    }
+
+    .search_button input {
+      padding: 5px;
+      border: 1px solid gainsboro;
+      border-right: none;
+      outline: none;
+      font-size: x-large;
+      
+    }
+    .search_button ::placeholder{
+      font-size: 12px;
+      
+    }
+
+    .search_button .border-search{
+      border: 1px solid;
+      border: 1px solid gainsboro;
+      border-left: none;
+      padding: 11px;
+    }
+
+    .line {
+      height: 40px;
+      width: 2px;
+      margin: 5px;
+      background-color: black;
+    }
+    .lines {
+      background-color: rgb(186, 179, 179);
+      width: 200px;
+      height: 1px;
+      float: left;
+      margin-left: 0px;
+      margin-top: 20px;
+    }
+    .base {
+      background-color: gray;
+      width: 200px;
+      height: 1px;
+      margin-left: 0px;
+      margin-top: 30px;
+    }
+    .column{
+      display: block;
+    }
+    .view{
+      display: flex;
+    }
+    .run{
+      margin-top: 25px;
+      align-items: center;
+      display: flex;
+    }
+    .run button{
+      background-color: black;
+      padding: 5px 20px;
+      font-size: 13px;
+      cursor: pointer;
+      border: none;
+      color: white;
+    }
+    .run input{
+      width: 100%;
+      border-radius: 5px;
+      padding: 5px;
+      background-color: white;
+      border: 1.5px solid rgb(242, 234, 234);
+      margin: 0 12px;
+      text-align: center;
+    }
+    .run input:focus{
+      outline: none;
+    }
+    .funny{
+      display: flex;
+      margin-top: 35px;
+
+    }
+    .off{
+      display: block;
+    }
+    .form{
+      display: flex;
+          justify-content: space-around;
+          align-items: center;
+          background-color: black;
+          height: 60px;
+          width: 20%;
+          color: white;
+          margin-top: 10px;
+      }
+      /*  */
+      @media screen and (max-width:760px) {
+        .search {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      flex-wrap: wrap;
+      border: 5px solid rgb(121, 115, 115);
+      background-color: rgb(235, 216, 216);
+      
+    }
+    .funny{
+      display: flex;
+      justify-content: center;
+      margin: 35px 0;
+      flex-wrap: wrap;
+    }
+    .run{
+      margin: 0;
+      flex-wrap: wrap;
+      /* flex-direction: column; */
+      justify-content: center;
+      width: fit-content;
+      display: inline-block;
+     
+    } 
+
+    
+    .button {
+      display: flex;
+      align-items: center;
+      margin: 10px;
+    }
+    .view{
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    iframe{
+      width: 500px;
+      height: 500px;
+      margin-bottom: 20px;
+    }
+    
+    .button input {
+      background: red;
+      color: white;
+      padding: 7px;
+      height: auto;
+      width: 100%;
+      margin: 20px;
+    }
+    .column{
+      display: inline-block;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .run input{
+      margin: 0;
+      width: 70px%;
+    }
+    .run button{
+      margin: 0;
+    }
+    .funny{
+      width: 300px;
+    }
+        
+      }
+    
+  </style>
+  <body>
+    <div class="search" >
+      <div class="item">
+        <i
+          class="fa-brands fa-tiktok"
+          style="color: green; float: left; margin: 10px; font-size: xx-large"
+        ></i>
+
+        <h2 style="color: rgb(255, 0, 0)">TiK ToK</h2>
+      </div>
+      <div class="search_button">
+        <input type="text" placeholder="search" />
+        <i class="fa-solid fa-magnifying-glass border-search"></i>
+      </div>
+      <div class="button">
+        <input type="button" value="log in" style="border-radius: 8px;font-size: 17px;align-content: center;" />
+        <i class="fa-solid fa-ellipsis-vertical" style="font-size: x-large"></i>
+      </div>
+    </div>
+    <div class="view">
+      <div class="column">
+          <div>
+            <i
+               class="fa-solid fa-house"
+              style="font-size: xx-large; color: blue; margin-top: 25px"
+           ></i
+           ><b style="font-size: 25px; margin-left: 10px">For You</b>
+         </div>
+          <div>
+           <i
+              class="fa-brands fa-searchengin"
+              style="font-size: xx-large; color: rgb(255, 0, 0); margin-top: 10px"
+           ></i
+            ><b style="font-size: 25px; margin-left: 10px">Explore</b>
+          </div>
+          <div>
+             <i
+               class="fa-regular fa-user"
+                style="font-size: x-large; margin-top: 15px; color: teal"
+               >
+             </i
+             ><i
+               class="fa-regular fa-user"
+                style="font-size: x-large; margin-top: 15px; color: teal"
+             ></i>
+              <b style="font-size: 25px; margin-left: 10px">Following</b>
+         </div>
+         <div>
+            <i
+              class="fa-solid fa-video"
+               style="font-size: xx-large; margin-top: 15px; color: blueviolet"
+           ></i>
+            <b style="font-size: 25px; margin-left: 10px">Live</b>
+         </div>
+          <div>
+            <i
+             class="fa-solid fa-user"
+               style="font-size: xx-large; margin-top: 15px; color: rgb(97, 12, 97)"
+           ></i>
+              <b style="font-size: 25px; margin-left: 10px">Profile</b>
+              <div>
+                <div class="base"></div>
+                <p style="color:tomato;font-size: 20px;">Login to follow creators,<br>like videos,and<br>view comments</p>
+                <input
+               type="button"
+               value="login"
+              style="
+                margin-top: 20px;
+                  font-size: xx-large;
+                width: 200px;
+                color: red;
+                 border: 1px solid red;
+              "/>
+         <div class="lines">
+        </div>
+        <!-- <div class="form">
+          <div>
+            <img
+              src="../images/tiktoklogo.jpg"
+                alt=""
+                 height="50px"
+                 width="50px"
+                style="border-radius: 100%"
+             >
+         </div>
+            <div>
+             <h4>Create TikTok effects,<br />get a reward</h4>
+            </div>  
+        </div>        -->
+
+      </div>
+     </div>
+      </div>
+        <div class="off">
+          <div class="run">
+            <button
+              >
+                All
+            </button>
+            <input
+               type="text"
+               placeholder="Singing & Dancing"
+          
+             />
+            <input
+               type="text"
+               placeholder="Comedy"
+            
+             />
+            <input
+               type="text"
+                placeholder="Relationship"
+            
+             />
+            <input
+                 type="text"
+                 placeholder="Sports"
+            
+             />
+            <input
+               type="text"
+                 placeholder="Technology"
+           
+             />
+            <input
+               type="text"
+                placeholder="Anime & Comics"
+            
+              />
+            <input
+                type="text"
+                placeholder="Daily Life"
+           
+              />
+                <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="funny" id="arrow">
+           <iframe width="300" id="diff-iframe" height="400" src="https://www.youtube.com/embed/IcZW_hPBS0Y?si=ZxVtTe9HUGrDYTFX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+           web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="300" height="400" src="https://www.youtube.com/embed/sHXkgPI_7U4?si=F8IITqXvgCIX9GLf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+            web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="margin-left: 25px;"></iframe>
+            <iframe width="300" height="400" src="https://www.youtube.com/embed/gXuwkjTVOyU?si=6XzCmxvn2PPBl3zQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+             web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="margin-left: 25px;"></iframe>
+          </div>
+        </div>
+    </div>
+
+   
+
+   <a href="#arrow"><i class="fas fa-arrow-up"   style="padding: 15px 20px;background-color: black;color: white;border-radius: 50%;position: fixed;bottom: 30px;right: 10px;"></i></a> 
+  </body>
+</html>
+
+
+

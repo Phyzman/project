@@ -1,0 +1,35 @@
+.spa {
+  height: 20vh;
+  width: 10%;
+  background-color: green;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+}
+
+.nannm_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.nannm_container b {
+  font-weight: bolder;
+  font-size: x-large;
+  color: green;
+}
+
+.national p {
+  color: red;
+  margin-top: -25px;
+}
+
+hr {
+  height: 3px;
+  background-color: black;
+}
+
+#Good-morn {
+  background-color: red;
+}
